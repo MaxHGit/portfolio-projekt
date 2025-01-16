@@ -3,11 +3,11 @@ import { Link } from "gatsby";
 import "../styles/header.css";
 
 const Header = ({ siteTitle }) => (
-  <header>
+  <header className="site-header">
     <ul>
-       <li>
-       <Link to="/" className="site-title">{siteTitle}</Link>
-       </li>
+      <li>
+        <Link to="/" className="site-title">{siteTitle}</Link>
+      </li>
       <li>
         <Link to="/portfolio">Portfolio</Link>
       </li>

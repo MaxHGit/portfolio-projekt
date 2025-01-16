@@ -1,0 +1,86 @@
+.portfolio-container {
+    padding: 20px;
+  }
+  
+  .portfolio-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .portfolio-filter-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .portfolio-filter-buttons button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .portfolio-filter-buttons button:hover {
+    background-color: #ddd;
+  }
+  
+
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .portfolio-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* liten hover animation för portfoliokorten */
+  .portfolio-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .portfolio-item a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .portfolio-item h2 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+
+  .portfolio-thumbnail {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .portfolio-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .portfolio-item {
+      width: 90%;
+    }
+  }
+  
