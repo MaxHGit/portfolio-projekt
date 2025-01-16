@@ -20,10 +20,10 @@ const PortfolioPage = ({ data }) => {
 
         <div className="portfolio-filter-buttons">
           <button onClick={() => setSelectedCategory("all")}>All</button>
-          <button onClick={() => setSelectedCategory("Front End")}>
-            Front End
-          </button>
+          <button onClick={() => setSelectedCategory("Front End")}>Front End</button>
           <button onClick={() => setSelectedCategory("UI/UX")}>UI/UX</button>
+          <button onClick={() => setSelectedCategory("SEO")}>SEO</button>
+
         </div>
 
         <ul className="portfolio-list">

@@ -3,22 +3,27 @@ import { Link } from "gatsby";
 import "../styles/header.css";
 
 const Header = ({ siteTitle }) => (
-  <header className="site-header">
-    <ul>
-      <li>
-        <Link to="/" className="site-title">{siteTitle}</Link>
-      </li>
-      <li>
-        <Link to="/portfolio">Portfolio</Link>
-      </li>
-      <li>
-        <Link to="/about">Om Mig</Link>
-      </li>
-      <li>
-        <Link to="/contact">Kontakt</Link>
-      </li>
-    </ul>
-  </header>
+<header className="site-header">
+  <div className="nav-container">
+    <div className="site-title">
+      <Link to="/">{siteTitle}</Link>
+    </div>
+    <nav>
+      <ul className="nav-links">
+        <li>
+          <Link to="/portfolio">Portfolio</Link>
+        </li>
+        <li>
+          <Link to="/about">Om Mig</Link>
+        </li>
+        <li>
+          <Link to="/contact">Kontakt</Link>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 );
 
 export default Header;

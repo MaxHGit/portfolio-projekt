@@ -1,0 +1,47 @@
+.portfolio-item-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem; /* Avstånd mellan bild och text */
+    padding: 50px 5%;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.portfolio-item-image img {
+    max-height: 500px; 
+    height: auto; 
+    border-radius: 10px;
+    box-shadow:  4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.portfolio-item-text {
+    max-width: 600px;
+}
+
+.portfolio-item-text h1 {
+    font-size: 2.5rem; /* Stor rubrik */
+    margin-bottom: 20px;
+}
+
+.portfolio-item-text p {
+    font-size: 1.2rem; /* Läsbar textstorlek */
+    line-height: 1.8; 
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+    .portfolio-item-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .portfolio-item-image img {
+        max-width: 90%; 
+        margin-bottom: 20px; 
+    }
+
+    .portfolio-item-text {
+        max-width: 100%;
+    }
+}
