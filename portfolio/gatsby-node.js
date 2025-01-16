@@ -1,18 +1,27 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
- */
+const path = require("path")
 
-/**
- * @type {import('gatsby').GatsbyNode['createPages']}
- */
-exports.createPages = async ({ actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  createPage({
-    path: "/using-dsg",
-    component: require.resolve("./src/templates/using-dsg.js"),
-    context: {},
-    defer: true,
+
+  // Hämta slugs från alla portfolio-items  på Contentful
+  const result = await graphql(`
+    query {
+      allContentfulPortfolioItem {
+        nodes {
+          slug
+        }
+      }
+    }
+  `)
+
+  // Skapa en sida för varje portfolio-item
+  result.data.allContentfulPortfolioItem.nodes.forEach(item => {
+    createPage({
+      path: `/portfolio/${item.slug}`,
+      component: path.resolve("./src/templates/portfolio-item.js"),
+      context: {
+        slug: item.slug,
+      },
+    })
   })
 }

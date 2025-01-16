@@ -1,0 +1,26 @@
+header {
+    padding: 0.5rem 1rem;
+    background-color: #f4f4f4; 
+  }
+  
+  header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Horisontella länkar */
+    gap: 1rem; 
+  }
+  
+  header li {
+    margin: 0;
+  }
+  
+  header a {
+    text-decoration: none;
+    color: #000000; 
+  }
+  
+  header a:hover {
+    color: #919191; /* Färg vid hover (valfritt) */
+  }
+  
