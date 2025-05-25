@@ -7,7 +7,12 @@ import Seo from "../components/seo"
 const AboutPage = () => (
   <Layout>
     <h1>About</h1>
-    <p>About yo boy</p>
+    <p>Jag är en blivande Front End-utvecklare
+som har lätt för att lära mig och anpassa
+mig till nya teknologier. Jag arbetar bra
+både självständigt och i team. Jag strävar
+alltid efter att hålla en hög nivå i mitt
+arbete och värdesätter därför noggrannhet.</p>
     <Link to="/">Gå tillbaka till startsidan</Link>
   </Layout>
 )
